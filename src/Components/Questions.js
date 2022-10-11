@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 import Options from './Options';
 
 const Questions = ({arrquestion}) => {
@@ -6,9 +7,9 @@ const Questions = ({arrquestion}) => {
    
     const answerHandler = (option) => {
         if (option === correctAnswer) {
-            console.log(true);
+           toast('Nice! You are Right')
         } else {
-            console.log(false);
+            toast('Ooh!You are wrong')
         }
     }
     return (
