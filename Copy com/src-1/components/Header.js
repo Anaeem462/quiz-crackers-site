@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
-
-const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
-    return (
-        <div className='bg-gray-100'>
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  return (
+    <div className='bg-gray-100'>
       <div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
         <div className='relative flex items-center justify-between'>
           <Link
@@ -14,9 +13,23 @@ const Navbar = () => {
             title='proReader'
             className='inline-flex items-center'
           >
-            <img src="../navBar-logo.png" alt="" />
-            <span className='ml-2 text-xl font-bold tracking-wide text-green-800'>
-                It-Quiz
+            <svg
+              className='w-8 text-blue-400'
+              viewBox='0 0 24 24'
+              strokeLinejoin='round'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeMiterlimit='10'
+              stroke='currentColor'
+              fill='none'
+            >
+              <rect x='3' y='1' width='7' height='12' />
+              <rect x='3' y='17' width='7' height='6' />
+              <rect x='14' y='1' width='7' height='6' />
+              <rect x='14' y='11' width='7' height='12' />
+            </svg>
+            <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
+              proReader
             </span>
           </Link>
           <ul className='flex items-center hidden space-x-8 lg:flex'>
@@ -33,35 +46,24 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                to='/quiz'
-                aria-label='quiz'
-                title='quiz'
+                to='/books'
+                aria-label='Books'
+                title='Books'
                 className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
                 :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
               >
-                Quiz
+                Books
               </NavLink>
             </li>
             <li>
               <NavLink
-                to='/statistics'
-                aria-label='Statistics'
-                title='Statistics'
+                to='/about'
+                aria-label='About us'
+                title='About us'
                 className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
                 :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
               >
-                Statistics
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to='/blog'
-                aria-label='Blog'
-                title='Blog'
-                className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
-                :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
-              >
-                Blog
+                About us
               </NavLink>
             </li>
           </ul>
@@ -98,9 +100,23 @@ const Navbar = () => {
                         title='proReader'
                         className='inline-flex items-center'
                       >
-                        <img src="../navBar-logo.png" alt="" />
-                        <span className='ml-2 text-xl font-bold tracking-wide text-green-800 uppercase'>
-                                It-Quiz
+                        <svg
+                          className='w-8 text-deep-purple-accent-400'
+                          viewBox='0 0 24 24'
+                          strokeLinejoin='round'
+                          strokeWidth='2'
+                          strokeLinecap='round'
+                          strokeMiterlimit='10'
+                          stroke='currentColor'
+                          fill='none'
+                        >
+                          <rect x='3' y='1' width='7' height='12' />
+                          <rect x='3' y='17' width='7' height='6' />
+                          <rect x='14' y='1' width='7' height='6' />
+                          <rect x='14' y='11' width='7' height='12' />
+                        </svg>
+                        <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
+                          proReader
                         </span>
                       </Link>
                     </div>
@@ -134,33 +150,22 @@ const Navbar = () => {
                       </li>
                       <li>
                         <Link
-                          to='/quiz'
-                          aria-label='Quiz'
-                          title='Quiz'
+                          to='/books'
+                          aria-label='Books'
+                          title='Books'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                          Quiz
+                          Books
                         </Link>
                       </li>
                       <li>
                         <Link
-                          to='/statistics'
-                          aria-label='Statistics'
-                          title='Statistics'
+                          to='/about'
+                          aria-label='About Us'
+                          title='About Us'
                           className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
                         >
-                         Statistics
-                        </Link>
-                      </li>
-                      
-                      <li>
-                        <Link
-                          to='/blog'
-                          aria-label='Blog'
-                          title='Blog'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                         Blog
+                          About Us
                         </Link>
                       </li>
                     </ul>
@@ -172,7 +177,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    );
-};
+  )
+}
 
-export default Navbar;
+export default Header
