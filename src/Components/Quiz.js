@@ -1,9 +1,10 @@
 import React from 'react';
+import QuizDetails from './QuizDetails';
 
 const Quiz = () => {
     return (
         <div>
-            this is quiz
+            <QuizDetails></QuizDetails>
         </div>
     );
 };
