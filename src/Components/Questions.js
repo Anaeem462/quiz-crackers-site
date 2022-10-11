@@ -26,7 +26,7 @@ const Questions = ({arrquestion}) => {
 
     return (
         <div className='border border-blue-500 p-5 m-5 rounded-md'>
-            <div className='flex'>
+            <div className='flex justify-between'>
                 <p className='text-xl text-center'>
                 <span className='text-red-600'>
                     Questions:
@@ -35,7 +35,7 @@ const Questions = ({arrquestion}) => {
               
                 </p>
             
-                <button className='m-2' >
+                <button className='m-2 ' >
                     <EyeIcon onClick={correctHandler} className="h-6 w-6 text-blue-500"></EyeIcon>
                 </button>
             </div>

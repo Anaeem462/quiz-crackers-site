@@ -7,6 +7,7 @@ import Statistics from "../Components/Statistics";
 import Blog from '../Components/Blog'
 import { loaderData } from "./Loader";
 import QuizDetails from "../Components/QuizDetails";
+import Quizes from "../Components/Quizes";
 
 
 export const routers = createBrowserRouter([
@@ -30,8 +31,8 @@ export const routers = createBrowserRouter([
             },
             {
                 path: '/quiz/:id',
-                loader: async({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
-                 element:<QuizDetails></QuizDetails>
+                loader: ({params})=> loaderData(params.id) ,
+                element:<QuizDetails></QuizDetails>
             },
             {
                 path: '/statistics',

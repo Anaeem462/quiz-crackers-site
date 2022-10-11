@@ -1,22 +1,26 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { QuizesContext } from './Main';
+import { QuizContext, QuizesContext } from './Main';
 import Questions from './Questions';
 
 const QuizDetails = () => {
-    const quizData = useLoaderData()
-    const { data } = quizData
-    const {questions}=data
+    const {question}=useLoaderData()
     
     return (
-        <div className='grid lg:grid-cols-2 grid-cols-1'>
+        <section className='grid grid-cols-5'>
+            <div className='grid col-span-4 lg:grid-cols-2 grid-cols-1 '>
             {
-                questions.map(arrquestion => <Questions
+                question.map(arrquestion => <Questions
                     key={arrquestion.id}
                     arrquestion={arrquestion}
                 ></Questions>)
             }
         </div>
+            <div className=' m-2'>
+
+            </div>
+        </section>
+
     );
 };
 

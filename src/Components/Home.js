@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
-import { QuizContext } from './Main';
-import Quizes from './Quizes';
+import Quiz from './Quiz';
+
 
 
 const Home = () => {
-  const quizData = useContext(QuizContext)
 
 
     return (
@@ -26,15 +25,11 @@ const Home = () => {
             </p>
           </div>
           </div>
+        
         </div>
-        <div className='grid lg:grid-cols-4 grid-cols-2 gap-4'>
-          {
-          quizData.map(quiz => <Quizes
-            quiz={quiz}
-            key={quiz.id}
-          ></Quizes>)
-        }
-        </div>
+        
+         <Quiz></Quiz>
+     
         
     </div>
     );
