@@ -56,10 +56,11 @@ const Questions = ({arrquestion,right,setRight,setWrong,wrong}) => {
                     ></Options>)
                 }
                  </div>
-                <div className={`${click ? 'border border-green-400 rounded-lg p-5 flex items-center mt-10' : 'hidden'} `} >
-
-                    <input className='h-5 w-5 rounded-full border border-blue-400 m-2'  type="radio" value={correctAnswer } name="Correct" />
-                    { correctAnswer}
+                <div className={`${click ? 'border border-green-400 rounded-lg p-5 flex items-center mt-10' : 'hidden'} hover:bg-yellow-500 hover:text-white`} >
+                    <p>
+                        Correct Answer Is:    <span className='text-red-500'>{correctAnswer}</span>
+                    </p>
+                    
                 </div>
             </div>
 

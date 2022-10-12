@@ -12,7 +12,7 @@ const QuizDetails = () => {
     
     return (<>
            
-        <section className='grid grid-cols-5'>
+        <section className='grid grid-cols-5 '>
             <div className='grid col-span-4 lg:grid-cols-2 grid-cols-1 '>
             {
                 question.map(arrquestion => <Questions
@@ -25,9 +25,9 @@ const QuizDetails = () => {
                 ></Questions>)
             }
         </div>
-            <div className=' m-2 bg-orange-400 rounded-md p-3 text-white'>
-                <p className='text-2xl border border-orange-200 rounded-md p-2'>Right Answer : <span className='text-black'>{right}</span></p>
-                <p className='text-2xl border border-orange-200 rounded-md p-2 mt-3'>Wrong Answer:  <span className='text-black'>{wrong}</span></p>
+            <div className=' m-2 bg-orange-400 rounded-md p-3 text-white sticky top-0'>
+                <p className='text-2xl border border-orange-200 rounded-md p-2  sticky top-2'>Right Answer : <span className='text-black'>{right}</span></p>
+                <p className='text-2xl border border-orange-200 rounded-md p-2 mt-3 sticky  top-32'>Wrong Answer:  <span className='text-black'>{wrong}</span></p>
 
             
             </div>
