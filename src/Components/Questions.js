@@ -3,22 +3,28 @@ import { toast } from 'react-toastify';
 import Options from './Options';
 import { BeakerIcon,EyeIcon } from '@heroicons/react/24/solid'
 
-const Questions = ({arrquestion}) => {
+const Questions = ({arrquestion,right,setRight,setWrong,wrong}) => {
     const { id, question, correctAnswer, options } = arrquestion
+   
     const [click, setClick]= useState(false)
    
     const answerHandler = (option) => {
         if (option === correctAnswer) {
-           toast('Nice! You are Right')
+            toast('Nice! You are Right')
+            setRight(right+1)
         } else {
             <div className='flex justify-center border border-gray-800'>
                 {
                     toast('Ooh!You are wrong')
+                
+                }
+                {
+                   setWrong(wrong+1) 
                 }
             </div>
         }
     }
-    
+   
     const correctHandler = () => {
             setClick(!click)
     }
@@ -36,7 +42,7 @@ const Questions = ({arrquestion}) => {
                 </p>
             
                 <button className='m-2 ' >
-                    <EyeIcon onClick={correctHandler} className="h-6 w-6 text-blue-500"></EyeIcon>
+                    <EyeIcon onClick={correctHandler} className="h-6 w-6 text-blue-500 hover:text-yellow-400"></EyeIcon>
                 </button>
             </div>
             <div>
