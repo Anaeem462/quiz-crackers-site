@@ -123,46 +123,49 @@ const Navbar = () => {
                   <nav>
                     <ul className='space-y-4'>
                       <li>
-                        <Link
-                          to='/'
-                          aria-label='Home'
-                          title='Home'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                          Home
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to='/quiz'
-                          aria-label='Quiz'
-                          title='Quiz'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                          Quiz
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to='/statistics'
-                          aria-label='Statistics'
-                          title='Statistics'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                         Statistics
-                        </Link>
-                      </li>
-                      
-                      <li>
-                        <Link
-                          to='/blog'
-                          aria-label='Blog'
-                          title='Blog'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                         Blog
-                        </Link>
-                      </li>
+              <NavLink
+                to='/home'
+                aria-label='Home'
+                title='Home'
+                className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
+                :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
+                >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/quiz'
+                aria-label='quiz'
+                title='quiz'
+                className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
+                :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
+              >
+                Quiz
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/statistics'
+                aria-label='Statistics'
+                title='Statistics'
+                className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
+                :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
+              >
+                Statistics
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/blog'
+                aria-label='Blog'
+                title='Blog'
+                className={({isActive})=>isActive?'font-medium tracking-wide text-blue-500  transition-colors duration-200 hover:text-deep-purple-accent-400'
+                :'font-medium tracking-wide text-gray-700  transition-colors duration-200 hover:text-deep-purple-accent-400'}
+              >
+                Blog
+              </NavLink>
+            </li>
                     </ul>
                   </nav>
                 </div>
