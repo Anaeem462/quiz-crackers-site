@@ -1,21 +1,41 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import Options from './Options';
-import { BeakerIcon,EyeIcon } from '@heroicons/react/24/solid'
+import { EyeIcon } from '@heroicons/react/24/solid'
 
-const Questions = ({arrquestion,right,setRight,setWrong,wrong}) => {
+const Questions = ({quizes,arrquestion,right,setRight,setWrong,wrong}) => {
     const { id, question, correctAnswer, options } = arrquestion
-   
+
+      
     const [click, setClick]= useState(false)
    
     const answerHandler = (option) => {
         if (option === correctAnswer) {
-            toast('Nice! You are Right')
+            toast.success('Great! You are Right.', {
+position: "top-center",
+autoClose: 1000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "colored",
+})
             setRight(right+1)
         } else {
             <div className='flex justify-center border border-gray-800'>
                 {
-                    toast('Ooh!You are wrong')
+                    toast.warn('You are wrong!', {
+position: "top-center",
+autoClose: 1000,
+hideProgressBar: false,
+closeOnClick: true,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "colored",
+})
+                   
                 
                 }
                 {
@@ -31,7 +51,10 @@ const Questions = ({arrquestion,right,setRight,setWrong,wrong}) => {
     
 
     return (
+        <>
+            
         <div className='border border-blue-500 p-5 m-5 rounded-md'>
+            
             <div className='flex justify-between'>
                 <p className='text-xl text-center'>
                 <span className='text-red-600'>
@@ -65,7 +88,8 @@ const Questions = ({arrquestion,right,setRight,setWrong,wrong}) => {
             </div>
 
             
-        </div>
+            </div>
+            </>
     );
 };
 

@@ -34,7 +34,7 @@ const Home = () => {
                 loop
                 autoplay
                 speed={5}
-                className='rounded'
+                className='rounded '
                 background='rgb(214, 226, 212)'
 
               >

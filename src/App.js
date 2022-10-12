@@ -9,7 +9,20 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={routers}></RouterProvider>
-      <ToastContainer />
+      <ToastContainer
+position="top-Center"
+autoClose={1000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
+
+<ToastContainer />
     </div>
   );
 }

@@ -11,9 +11,13 @@ const QuizDetails = () => {
     const [wrong,setWrong] = useState(0)
     
     return (<>
+        <h1 className='text-center text-4xl text-blue-500'>{quize.data.name } Quizes</h1>
            
         <section className='grid grid-cols-5 '>
+           
             <div className='grid col-span-4 lg:grid-cols-2 grid-cols-1 '>
+                
+            
             {
                 question.map(arrquestion => <Questions
                     key={arrquestion.id}
@@ -22,6 +26,7 @@ const QuizDetails = () => {
                     setRight={setRight}
                     wrong={wrong}
                     setWrong={setWrong}
+                    quizes={quize.data}
                 ></Questions>)
             }
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRightIcon} from '@heroicons/react/24/solid'
 
 const Quizes = ({ quiz }) => {
     const {id,name,logo}=quiz
@@ -10,8 +11,11 @@ const Quizes = ({ quiz }) => {
                 <div className="space-y-2">
                     <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
                 </div>
-                <Link to={`/quiz/${id}`}>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">Go to Quiz</button>
+                <Link to={`/quiz/${id}`} className=''>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">
+                        Go to Quiz
+                        <ArrowRightIcon className='h-4 ml-1 text-center'></ArrowRightIcon>
+                    </button>
                 </Link>
 		
 	</div>
