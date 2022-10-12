@@ -14,9 +14,9 @@ const Navbar = () => {
             title='proReader'
             className='inline-flex items-center'
           >
-            <img src="../logo.png" alt="" className='w-5 h-5'/>
+            <img src="../quiz.svg" alt="" className='w-5 h-5'/>
             <span className='ml-2 text-xl font-bold tracking-wide text-green-800'>
-                It-Quiz
+                Programming-Quiz
             </span>
           </Link>
           <ul className='flex items-center hidden space-x-8 lg:flex'>
@@ -98,9 +98,9 @@ const Navbar = () => {
                         title='proReader'
                         className='inline-flex items-center'
                       >
-                         <img src="../logo.png" alt="" className='w-5 h-5'/>
+                         <img src="../quiz.svg" alt="" className='w-5 h-5'/>
                         <span className='ml-2 text-xl font-bold tracking-wide text-green-800 uppercase'>
-                                It-Quiz
+                                Programming-Quiz
                         </span>
                       </Link>
                     </div>
